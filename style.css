@@ -1,0 +1,207 @@
+body {
+    background-image: url('image.gif'); /* Ścieżka do pliku GIF */
+    background-size: cover; /* Dopasowanie tła do rozmiaru ekranu */
+    background-repeat: no-repeat; /* Zapobieganie powtarzaniu się tła */
+    background-attachment: fixed; /* Utrzymanie tła stałym podczas przewijania */
+}
+
+
+.bg {
+    color: black;
+}
+
+.container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+    margin-top: 25px;
+}
+
+.header {
+    display: flex; justify-content: center; /* centrowanie poziome */ align-items: center; /* centrowanie pionowe */ 
+}
+img {
+    width: 250px;
+}
+.IG {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    text-decoration: none; /* Usuwa podkreślenie */
+    transition: transform 0.3s ease; /* Ustawia czas trwania animacji i jej styl */
+    position: relative; /* Ustawia pozycję względną */
+    margin-top: 20px;
+}
+
+.IG:hover {
+    transform: translateY(-5px); /* Podnosi tekst o 5 pikseli przy najechaniu */
+}
+
+
+
+.beats {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font-size: 50px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    text-decoration: none; /* Usuwa podkreślenie */transition: transform 0.3s ease; /* Ustawia czas trwania animacji i jej styl */
+}
+
+.beats:hover {
+    transform: translateY(-5px); /* Podnosi tekst o 5 pikseli przy najechaniu */
+}
+
+
+
+
+.youtube {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-left: 20px;
+    text-decoration: none; /* Usuwa podkreślenie */transition: transform 0.3s ease; /* Ustawia czas trwania animacji i jej styl */
+}
+
+.rotating_object {
+    display: inline-block; 
+    justify-content: center;
+    font-size: 50px; 
+    color: #333; 
+    text-align: center; 
+    animation: rotate 10s linear infinite; 
+    transform-style: preserve-3d;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+@keyframes rotate { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+
+.youtube:hover {
+    transform: translateY(-5px); /* Podnosi tekst o 5 pikseli przy najechaniu */
+}   
+
+
+
+.custom-link { text-decoration: none; /* Usuwa podkreślenie */ color: inherit; /* Zachowuje aktualny kolor tekstu */ } 
+
+.custom-link:visited { text-decoration: none; /* Usuwa podkreślenie po odwiedzeniu linku */ color: inherit; /* Zachowuje aktualny kolor tekstu po odwiedzeniu */ }
+
+.music {
+    margin-left: 25px;
+    margin-bottom: 5px;
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+.volume {
+    margin-left: 25px;
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+    position: absolute;
+    left: 150px;
+}
+
+/* Stylizowanie przycisków */
+button {
+    background-color: transparent; /* Przeźroczyste tło */
+    border: 2px solid white; /* Biała obwódka */
+    color: white; /* Biały kolor tekstu */
+    padding: 10px 20px; /* Wewnętrzne odstępy */
+    text-align: center; /* Wyrównanie tekstu */
+    text-decoration: none; /* Bez podkreślenia */
+    display: inline-block; /* Wyświetlanie jako blok wewnętrzny */
+    font-size: 16px; /* Rozmiar czcionki */
+    margin: 4px 2px; /* Marginesy */
+    cursor: pointer; /* Wskaźnik kursora */
+    border-radius: 8px; /* Zaokrąglone rogi */
+    margin-left: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Stylizowanie suwaka */
+input[type=range] {
+    -webkit-appearance: none; /* Wyłącz domyślny styl */
+    margin-left: 20px;
+    height: 10px; /* Wysokość */
+    background: #ddd; /* Kolor tła */
+    outline: none; /* Bez obramowania */
+    opacity: 0.7; /* Przezroczystość */
+    transition: opacity .2s; /* Przejście */
+    border-radius: 5px; /* Zaokrąglone rogi */
+}
+
+input[type=range]:hover {
+    opacity: 1; /* Pełna przezroczystość przy najechaniu */
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Wyłącz domyślny styl */
+    appearance: none;
+    width: 15px; /* Szerokość uchwytu */
+    height: 15px; /* Wysokość uchwytu */
+    background: rgba(102, 102, 102, 0.476); /* Przeźroczyste tło uchwytu */
+    border: 2px solid white; /* Biała obwódka uchwytu */
+    cursor: pointer; /* Wskaźnik kursora */
+    border-radius: 50%; /* Zaokrąglony uchwyt */
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 25px; /* Szerokość uchwytu */
+    height: 25px; /* Wysokość uchwytu */
+    background: rgba(102, 102, 102, 0.476); /* Przeźroczyste tło uchwytu */
+    border: 2px solid white; /* Biała obwódka uchwytu */
+    cursor: pointer; /* Wskaźnik kursora */
+    border-radius: 50%; /* Zaokrąglony uchwyt */
+}
+
+/* Stylizowanie sekcji intro */
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.intro button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 20px 40px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Ukrywanie głównej zawartości */
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

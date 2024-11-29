@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trocki</title>
+</head>
+<body bgcolor="black">
+    <audio id="background-music" src="C:\Users\ktroc\Desktop\strona\003.mp3" loop></audio>
+
+    <div class="header">
+        <img src="TROCKI NEW.png" alt="trocki logo">
+    </div>
+
+    <div id="intro" class="intro">
+        <button onclick="openSite()">OPEN SITE</button>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <div class="IG"><a href="https://www.instagram.com/trocki055/" class="custom-link" target="_blank">INSTAGTAM</a></div>
+        <div class="beats"><a href="beats.html" class="custom-link" target="_blank">BEATS</a></div>
+        <div class="youtube"><a href="https://www.youtube.com/@Trocki0555" class="custom-link" target="_blank">YOUTUBE</a></div>
+        <div class="container">
+            <div class="rotating_object">eiDrOtrAekaM</div>
+        </div>
+        <div class="controls-container">
+        
+            <div class="volume"><b>VOLUME</b></div>
+            <input type="range" id="volume-control" min="0" max="100" value="10" onchange="setVolume(this.value)">
+        </div>
+    </div>
+
+    <script>
+        function openSite() {
+            document.getElementById('intro').style.display = 'none';
+            var mainContent = document.getElementById('main-content');
+            mainContent.classList.remove('hidden');
+            mainContent.classList.add('fade-in');
+            var audio = document.getElementById('background-music');
+            audio.volume = 0.05; // Ustawienie głośności na 10%
+            audio.play();
+        }
+
+        function toggleMute() {
+            var audio = document.getElementById('background-music');
+            audio.muted = !audio.muted;
+        }
+
+        function setVolume(value) {
+            var audio = document.getElementById('background-music');
+            audio.volume = value / 100;
+        }
+    </script>
+</body>
+</html>
